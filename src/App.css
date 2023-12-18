@@ -1,0 +1,17 @@
+.App{
+
+}
+.overlay{
+    height: 100vh;
+    opacity: 1;
+    color: black;
+    z-index: 10;
+    animation: fadeOut 1s;
+    animation-delay: 2s;
+}
+@keyframes fadeOut{
+    to{opacity: 0;}
+}
+@keyframes fadeInUp{
+
+}
