@@ -1,17 +1,111 @@
-.App{
-
+@font-face {
+    font-family: 'Sansation';
+    src: url('../assets/fonts/sansation/Sansation_Regular.ttf') format('truetype');
 }
-.overlay{
-    height: 100vh;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sansation', Arial, sans-serif;
+    color: white;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+.header {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    background-size: cover;
+    font-size: 4em; /* Even larger font size for greater impact */
+    color: #fff; /* Bright text color for contrast */
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Increase the height of each item */
+    padding: 10vh 5%; /* Add vertical spacing */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    will-change: transform, opacity;
+}
+
+.timeline-item.left .timeline-content,
+.timeline-item.right .timeline-content {
+    width: 45%; /* Set width for content */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.timeline-item.left .timeline-content {
+    text-align: right;
+}
+
+.timeline-item.right .timeline-content {
+    text-align: left;
+}
+
+.timeline-item.left .timeline-image,
+.timeline-item.right .timeline-image {
+    width: 45%; /* Set width for images */
+}
+
+.timeline-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Animation Trigger */
+.on-screen {
     opacity: 1;
-    color: black;
-    z-index: 10;
-    animation: fadeOut 1s;
-    animation-delay: 2s;
+    transform: translateY(0);
 }
-@keyframes fadeOut{
-    to{opacity: 0;}
-}
-@keyframes fadeInUp{
 
+.timeline-content {
+    max-width: 600px; /* Restrict content width */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background for content */
+    border-radius: 10px; /* Rounded corners */
 }
+
+.timeline-content p {
+    font-size: 24px; /* Larger text size */
+}
+
+.year-indicator {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.year {
+    font-size: 24px; /* Larger default font size */
+    opacity: 0.5; /* Lower default opacity */
+    transition: font-size 0.3s ease, opacity 0.3s ease;
+    margin: 15px 0; /* Adjust spacing */
+}
+
+.year.active {
+    font-size: 36px; /* Larger size for the active year */
+    opacity: 1; /* Full opacity for the active year */
+}
+
+.on-screen {
+    opacity: 1;
+    transform: translateX(0);
+}
+

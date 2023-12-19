@@ -1,12 +1,14 @@
 import React from "react";
+import "./App.css"
+import Header from "./components/Header";
+import Timeline from "./components/timeline/Timeline";
 
 function App() {
     return (
-      <>
-          <div className={"overlay"}>
-
-          </div>
-      </>
+        <div>
+            <Header />
+            <Timeline />
+        </div>
     );
 }
 
