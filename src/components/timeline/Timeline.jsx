@@ -1,10 +1,11 @@
 import React, {useEffect, useRef, useState} from "react";
 import TimelineItem from "./TimelineItem";
 import YearIndicator from "./YearIndicator";
+import debounce from "lodash/debounce";
 
 function Timeline() {
     const events = [
-        { year: "Beginnings", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Beginnings: " },
+        { year: "Beginnings", linkedImage: { url: "./assets/images/images.png", link: "https://example.com" }, description: "Beginnings: " },
         { year: "Summer at FirstBuild", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2021" },
         { year: "DSA at DA", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2022" },
         { year: "GEA Smarthome", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2023" },
@@ -14,17 +15,25 @@ function Timeline() {
     const [visibleYears, setVisibleYears] = useState(new Set());
     const [yearIndicatorAnimation, setYearIndicatorAnimation] = useState('');
     useEffect(() => {
-        const handleScroll = () => {
-            const scrolledPast50vh = window.scrollY > window.innerHeight * 0.8;
-            setYearIndicatorAnimation(scrolledPast50vh ? 'fade-in' : 'fade-out');
-        };
+        // Define a debounced version of handleScroll
+        const debouncedHandleScroll = debounce(() => {
+            const scrolledPast50vh = window.scrollY > window.innerHeight * 0.5;
 
-        // Add scroll event listener
-        window.addEventListener('scroll', handleScroll);
+            setYearIndicatorAnimation((prevAnimation) => {
+                if (
+                    (scrolledPast50vh && prevAnimation !== "fade-in") ||
+                    (!scrolledPast50vh && prevAnimation !== "fade-out")
+                ) {
+                    return scrolledPast50vh ? "fade-in" : "fade-out";
+                }
+                return prevAnimation;
+            });
+        }, 100); // Adjust the debounce delay as needed
 
-        // Clean up the event listener
+        window.addEventListener("scroll", debouncedHandleScroll);
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener("scroll", debouncedHandleScroll);
         };
     }, []);
     const handleVisibilityChange = (year, isVisible) => {
