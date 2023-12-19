@@ -1,7 +1,7 @@
 import React from "react";
 
 function YearIndicator({ activeYear }) {
-    const years = [2020, 2021, 2022, 2023];
+    const years = ["Beginnings", "Summer at FirstBuild", "DSA at DA", "GEA Smarthome", "Purdue"];
 
     return (
         <div className="year-indicator">

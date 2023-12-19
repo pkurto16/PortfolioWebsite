@@ -27,6 +27,7 @@ body {
 
 .timeline {
     position: relative;
+    max-width: 70vw;
 }
 
 .timeline-item {
@@ -34,7 +35,7 @@ body {
     align-items: center;
     justify-content: space-between;
     min-height: 80vh; /* Increase the height of each item */
-    padding: 10vh 5%; /* Add vertical spacing */
+    padding: 20vh 5%; /* Add vertical spacing */
     opacity: 0;
     transform: translateY(100px);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;

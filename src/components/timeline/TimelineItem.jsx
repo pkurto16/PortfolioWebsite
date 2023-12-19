@@ -1,10 +1,10 @@
 import React from "react";
 import { useInView } from 'react-intersection-observer';
 
-function TimelineItem({ year, image, description, alignment, onVisibilityChange }) {
+function TimelineItem({ year, linkedImage, description, alignment, onVisibilityChange }) {
     const { ref, inView } = useInView({
         triggerOnce: false,
-        threshold: 0.3,
+        threshold: 0.5,
     });
 
     // Call the callback function when the in-view status changes
@@ -14,11 +14,24 @@ function TimelineItem({ year, image, description, alignment, onVisibilityChange 
 
     const isLeftAligned = alignment === 'left';
 
+    const handleImageClick = () => {
+        // Open the link in a new tab
+        window.open(linkedImage.link, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <div ref={ref} className={`timeline-item ${isLeftAligned ? 'left' : 'right'} ${inView ? 'on-screen' : ''}`}>
-            {isLeftAligned && <div className="timeline-image"><img src={image} alt={`Year ${year}`} /></div>}
+            {isLeftAligned && (
+                <div className="timeline-image" onClick={handleImageClick}>
+                    <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
+                </div>
+            )}
             <div className="timeline-content"><p>{description}</p></div>
-            {!isLeftAligned && <div className="timeline-image"><img src={image} alt={`Year ${year}`} /></div>}
+            {!isLeftAligned && (
+                <div className="timeline-image" onClick={handleImageClick}>
+                    <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
+                </div>
+            )}
         </div>
     );
 }

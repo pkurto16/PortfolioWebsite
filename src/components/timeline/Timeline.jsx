@@ -4,10 +4,11 @@ import YearIndicator from "./YearIndicator";
 
 function Timeline() {
     const events = [
-        { year: 2020, image: "image1.jpg", description: "Beginnings: " },
-        { year: 2021, image: "image2.jpg", description: "Description for 2021" },
-        { year: 2022, image: "image3.jpg", description: "Description for 2022" },
-        { year: 2023, image: "image4.jpg", description: "Description for 2023" },
+        { year: "Beginnings", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Beginnings: " },
+        { year: "Summer at FirstBuild", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2021" },
+        { year: "DSA at DA", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2022" },
+        { year: "GEA Smarthome", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2023" },
+        { year: "Purdue", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2023" },
     ];
 
     const [visibleYears, setVisibleYears] = useState(new Set());
@@ -34,14 +35,17 @@ function Timeline() {
                     <TimelineItem
                         key={index}
                         year={event.year}
-                        image={event.image}
+                        linkedImage={event.linkedImage}
                         description={event.description}
                         alignment={index % 2 === 0 ? 'left' : 'right'}
                         onVisibilityChange={handleVisibilityChange}
                     />
+
+
                 ))}
+                <YearIndicator activeYear={activeYear} />
             </div>
-            <YearIndicator activeYear={activeYear} />
+
         </>
     );
 }
