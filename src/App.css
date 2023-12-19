@@ -19,10 +19,12 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.9));
+    background: Black;
     background-size: cover;
     font-size: 4em; /* Even larger font size for greater impact */
     color: #fff; /* Bright text color for contrast */
+    position: relative;
+    z-index: 3;
 }
 
 .timeline {
@@ -90,9 +92,28 @@ body {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 100;
+    opacity: 0;
+    z-index: 2;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;}
+    to{
+        opacity: 1;}
+}
+@keyframes fadeOut {
+    from{
+        opacity: 1;}
+    to{
+        opacity: 0;}
+}
+.fade-in {
+    animation: fadeIn 0.25s forwards;
 }
 
+.fade-out {
+    animation: fadeOut 0.25s forwards;
+}
 .year {
     font-size: 24px; /* Larger default font size */
     opacity: 0.5; /* Lower default opacity */

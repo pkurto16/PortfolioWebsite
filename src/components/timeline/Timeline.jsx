@@ -1,4 +1,4 @@
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import TimelineItem from "./TimelineItem";
 import YearIndicator from "./YearIndicator";
 
@@ -12,7 +12,21 @@ function Timeline() {
     ];
 
     const [visibleYears, setVisibleYears] = useState(new Set());
+    const [yearIndicatorAnimation, setYearIndicatorAnimation] = useState('');
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrolledPast50vh = window.scrollY > window.innerHeight * 0.8;
+            setYearIndicatorAnimation(scrolledPast50vh ? 'fade-in' : 'fade-out');
+        };
 
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const handleVisibilityChange = (year, isVisible) => {
         setVisibleYears(prevVisibleYears => {
             const updatedVisibleYears = new Set(prevVisibleYears);
@@ -40,12 +54,9 @@ function Timeline() {
                         alignment={index % 2 === 0 ? 'left' : 'right'}
                         onVisibilityChange={handleVisibilityChange}
                     />
-
-
                 ))}
-                <YearIndicator activeYear={activeYear} />
             </div>
-
+            <YearIndicator activeYear={activeYear} animationClass={yearIndicatorAnimation}/>
         </>
     );
 }
