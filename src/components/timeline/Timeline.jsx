@@ -2,10 +2,11 @@ import React, {useEffect, useRef, useState} from "react";
 import TimelineItem from "./TimelineItem";
 import YearIndicator from "./YearIndicator";
 import debounce from "lodash/debounce";
+import StaticIndicator from "./StaticIndicator";
 
 function Timeline() {
     const events = [
-        { year: "Beginnings", linkedImage: { url: "./assets/images/images.png", link: "https://example.com" }, description: "Beginnings: " },
+        { year: "Beginnings", linkedImage: { url: "../images/images.png", link: "https://example.com" }, description: "Beginnings: " },
         { year: "Summer at FirstBuild", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2021" },
         { year: "DSA at DA", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2022" },
         { year: "GEA Smarthome", linkedImage: { url: "../assets/images/images.png", link: "https://example.com" }, description: "Description for 2023" },
@@ -71,7 +72,10 @@ function Timeline() {
                     />
                 ))}
             </div>
-            <YearIndicator activeYear={activeYear} animationClass={yearIndicatorAnimation}/>
+            <StaticIndicator
+                activeYear={activeYear}
+                yearIndicatorAnimation={yearIndicatorAnimation}/>
+
         </>
     );
 }

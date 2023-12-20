@@ -78,14 +78,14 @@ body {
 }
 
 .timeline-content {
-    max-width: 600px; /* Restrict content width */
+    max-width: 70vw;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Subtle background for content */
     border-radius: 10px; /* Rounded corners */
 }
 
 .timeline-content p {
-    font-size: 24px; /* Larger text size */
+    font-size: 2vw; /* Larger text size */
 }
 
 .year-indicator {
@@ -94,6 +94,7 @@ body {
     margin-right: 5vw;
     top: 50%;
     transform: translateY(-50%);
+    max-width: 20vw;
     opacity: 0;
     z-index: 2;
 }
@@ -116,15 +117,26 @@ body {
 .fade-out {
     animation: fadeOut 0.25s forwards;
 }
+
+.static-indicator{
+    background: #042e60;
+    opacity: 1;
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+    margin-right: 5vw;
+    max-width: 20vw;
+}
+
 .year {
-    font-size: 24px; /* Larger default font size */
+    font-size: 1.5vw; /* Larger default font size */
     opacity: 0.5; /* Lower default opacity */
     transition: font-size 0.3s ease, opacity 0.3s ease;
     margin: 15px 0; /* Adjust spacing */
 }
 
 .year.active {
-    font-size: 36px; /* Larger size for the active year */
+    font-size: 3vw; /* Larger size for the active year */
     opacity: 1; /* Full opacity for the active year */
 }
 
