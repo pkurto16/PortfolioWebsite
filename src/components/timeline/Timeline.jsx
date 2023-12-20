@@ -7,10 +7,10 @@ import StaticIndicator from "./StaticIndicator";
 function Timeline() {
     const events = [
         { year: "Beginnings", linkedImage: { url: "/assets/apcs.png", link: "/" }, description: "Beginnings: " },
-        { year: "Summer at FirstBuild", linkedImage: { url: "/assets/firstbuild.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Description for 2021" },
-        { year: "DSA at DA", linkedImage: { url: "../images/images.png", link: "https://example.com" }, description: "Description for 2022" },
-        { year: "GEA Smarthome", linkedImage: { url: "../images/images.png", link: "https://example.com" }, description: "Description for 2023" },
-        { year: "Purdue", linkedImage: { url: "../images/images.png", link: "https://example.com" }, description: "Description for 2023" },
+        { year: "Summer at FirstBuild", linkedImage: { url: "/assets/apcs.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Description for 2021" },
+        { year: "DSA at DA", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2022" },
+        { year: "GEA Smarthome", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023" },
+        { year: "Purdue", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023" },
     ];
 
     const [visibleYears, setVisibleYears] = useState(new Set());
