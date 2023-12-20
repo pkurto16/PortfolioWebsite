@@ -38,6 +38,7 @@ body {
     align-items: center;
     justify-content: space-between;
     min-height: 80vh; /* Increase the height of each item */
+    max-width: 70vw;
     padding: 20vh 5%; /* Add vertical spacing */
     opacity: 0;
     transform: translateY(100px);
@@ -63,11 +64,12 @@ body {
 
 .timeline-item.left .timeline-image,
 .timeline-item.right .timeline-image {
-    width: 45%; /* Set width for images */
+    width: 100%;
+    height: auto;
 }
 
 .timeline-content img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -78,7 +80,6 @@ body {
 }
 
 .timeline-content {
-    max-width: 70vw;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1); /* Subtle background for content */
     border-radius: 10px; /* Rounded corners */
