@@ -8,7 +8,7 @@ body {
     padding: 0;
     font-family: 'Sansation', Arial, sans-serif;
     color: white;
-    background-image: radial-gradient(at top left, rgba(109, 213, 237, 0.2) 30%, rgba(33, 147, 176, 0.2) 70%, rgba(144, 164, 174, 0.2) 90%, rgba(176, 190, 197, 0.2) 100%);
+    background: #041b3a;
     overflow-x: hidden;
 }
 
@@ -19,6 +19,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background: #041b3a;
     background-image: radial-gradient(at top left, rgba(109, 213, 237, 0.2) 30%, rgba(33, 147, 176, 0.2) 70%, rgba(144, 164, 174, 0.2) 90%, rgba(176, 190, 197, 0.2) 100%);
     background-size: cover;
     font-size: 4em; /* Even larger font size for greater impact */

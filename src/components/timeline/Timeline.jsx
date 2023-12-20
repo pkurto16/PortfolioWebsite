@@ -28,7 +28,7 @@ function Timeline() {
                 }
                 return prevAnimation;
             });
-        }, 100); // Adjust the debounce delay as needed
+        }, 5); // Adjust the debounce delay as needed
 
         window.addEventListener("scroll", debouncedHandleScroll);
 
@@ -39,14 +39,20 @@ function Timeline() {
     const handleVisibilityChange = (year, isVisible) => {
         setVisibleYears(prevVisibleYears => {
             const updatedVisibleYears = new Set(prevVisibleYears);
-            if (isVisible) {
-                updatedVisibleYears.add(year);
-            } else {
-                updatedVisibleYears.delete(year);
+            const needsUpdate = isVisible ? !updatedVisibleYears.has(year) : updatedVisibleYears.has(year);
+
+            if (needsUpdate) {
+                if (isVisible) {
+                    updatedVisibleYears.add(year);
+                } else {
+                    updatedVisibleYears.delete(year);
+                }
+                return updatedVisibleYears;
             }
-            return updatedVisibleYears;
+            return prevVisibleYears;
         });
     };
+
 
     // Determine the most relevant year to display
     const activeYear = Array.from(visibleYears).sort().reverse()[0];
