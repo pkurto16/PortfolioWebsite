@@ -54,10 +54,7 @@ body {
     border-radius: 10px;
 }
 
-.timeline-item.left .timeline-content {
-    text-align: right;
-}
-
+.timeline-item.left .timeline-content,
 .timeline-item.right .timeline-content {
     text-align: left;
 }

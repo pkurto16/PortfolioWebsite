@@ -6,41 +6,41 @@ import StaticIndicator from "./StaticIndicator";
 
 function Timeline() {
     const events = [
-        { year: "Beginnings", linkedImage: { url: "/assets/apcs.png", link: "" }, description: "Beginnings: ", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n" +
-                "● Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
-                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n" +
-                "● Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
-                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n" +
-                "● Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
-                "throughout the school year to advance the Gen AI initiative"},
-        { year: "FirstBuild", linkedImage: { url: "/assets/firstbuild.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Summer at FirstBuild:",text:"Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n" +
-                "● Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
-                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n" +
-                "● Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
-                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n" +
-                "● Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
-                "throughout the school year to advance the Gen AI initiative" },
-        { year: "DSA at DA", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2022", text:"Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n" +
-                "● Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
-                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n" +
-                "● Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
-                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n" +
-                "● Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
-                "throughout the school year to advance the Gen AI initiative"},
-        { year: "GE Appliances", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "GE Appliances: ", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n" +
-                "● Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
-                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n" +
-                "● Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
-                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n" +
-                "● Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
-                "throughout the school year to advance the Gen AI initiative" },
-        { year: "Purdue", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n" +
-                "● Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
-                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n" +
-                "● Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
-                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n" +
-                "● Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
-                "throughout the school year to advance the Gen AI initiative"},
+        { year: "Beginnings", linkedImage: { url: "/assets/apcs.png", link: "" }, description: "Beginnings: ", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n\n" +
+                "- Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
+                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n\n" +
+                "- Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
+                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n\n" +
+                "- Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
+                "throughout the school year to advance the Gen AI initiative\n\n"},
+        { year: "FirstBuild", linkedImage: { url: "/assets/firstbuild.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Summer at FirstBuild:",text:"Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n\n" +
+                "- Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
+                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n\n" +
+                "- Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
+                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n\n" +
+                "- Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
+                "throughout the school year to advance the Gen AI initiative\n\n" },
+        { year: "DSA at DA", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2022", text:"Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n\n" +
+                "- Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
+                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n\n" +
+                "- Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
+                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n\n" +
+                "- Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
+                "throughout the school year to advance the Gen AI initiative\n\n"},
+        { year: "GE Appliances", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "GE Appliances: ", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n\n" +
+                "- Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
+                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n\n" +
+                "- Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
+                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n\n" +
+                "- Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
+                "throughout the school year to advance the Gen AI initiative\n\n" },
+        { year: "Purdue", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023", text: "Developed a recipe scraping REST API for the Smart Home Solutions Cloud Team in my first week\n\n" +
+                "- Recruited as one of the software developers to help launch SmartHQ AI - a partnership development between\n" +
+                "GEA SmartHQ and Google Cloud’s generative AI platform to enhance consumer experience.\n\n" +
+                "- Responsible for adding backend infrastructure features for new ChatGPT@GEA (a SmartHQ AI assistant):\n" +
+                "Chat History Summary, Liking Messages to Enhance Model, Chat History Editing with Paths, and more\n\n" +
+                "- Recognized by CTO as a key contributor for the successful launch and received an offer to continue working\n" +
+                "throughout the school year to advance the Gen AI initiative\n\n"},
     ];
 
     const [visibleYears, setVisibleYears] = useState(new Set());
