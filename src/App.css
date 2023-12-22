@@ -35,6 +35,7 @@ body {
 
 .timeline-item {
     display: flex;
+    column-gap: 2vw;
     align-items: self-start;
     justify-content: space-between;
     min-height: 80vh; /* Increase the height of each item */
@@ -148,9 +149,15 @@ body {
     font-size: 2.5vw; /* Larger size for the active year */
     opacity: 1; /* Full opacity for the active year */
 }
+.year a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 .on-screen {
     opacity: 1;
     transform: translateX(0);
 }
-
+html{
+    scroll-behavior: smooth;
+}

@@ -35,6 +35,7 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
     }
 
     return (
+        <section id = {year}>
         <div ref={ref} className={`timeline-item ${isLeftAligned ? 'left' : 'right'} ${inView ? 'on-screen' : ''}`}>
             {isLeftAligned && (
                 generateImage("timeline-item.left")
@@ -47,6 +48,7 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
                 generateImage("timeline-item.right")
             )}
         </div>
+        </section>
     );
 }
 
