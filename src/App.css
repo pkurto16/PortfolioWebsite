@@ -42,13 +42,13 @@ body {
     padding: 20vh 2vw 20vh 5vw; /* Add vertical spacing */
     opacity: 0;
     transform: translateX(-10vw);
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     will-change: transform, opacity;
 }
 
 .timeline-item.left .timeline-content,
 .timeline-item.right .timeline-content {
-    width: 45%; /* Set width for content */
+    width: 100%;
     padding: 2vw;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -85,11 +85,13 @@ body {
 .timeline-content {
     padding: 0.5vw;
     background: rgba(255, 255, 255, 0.1); /* Subtle background for content */
+    align-content: space-between;
     border-radius: 10px; /* Rounded corners */
 }
 
 .timeline-content p {
     font-size: 2vw;
+    text-align: center;
 }
 .timeline-content text {
     font-size: 1vw;

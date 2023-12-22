@@ -4,7 +4,7 @@ import { useInView } from 'react-intersection-observer';
 function TimelineItem({ year, linkedImage, description, text, alignment, onVisibilityChange }) {
     const { ref, inView } = useInView({
         triggerOnce: false,
-        threshold: 0.5,
+        threshold: 0.3,
     });
 
     // Call the callback function when the in-view status changes

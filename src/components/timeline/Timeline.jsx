@@ -48,7 +48,7 @@ function Timeline() {
     useEffect(() => {
         // Define a debounced version of handleScroll
         const debouncedHandleScroll = debounce(() => {
-            const scrolledPast50vh = window.scrollY > window.innerHeight * 0.8;
+            const scrolledPast50vh = window.scrollY > window.innerHeight * 0.7;
 
             setYearIndicatorAnimation((prevAnimation) => {
                 if (
