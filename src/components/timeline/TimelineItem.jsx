@@ -16,26 +16,35 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
     const isClickable = !(linkedImage.link === '');
     const handleImageClick = () => {
         // Open the link in a new tab
-        if(isClickable){
-            window.open(linkedImage.link, '_blank', 'noopener,noreferrer');
-        }
+        window.open(linkedImage.link, '_blank', 'noopener,noreferrer');
     };
+
+    const generateImage = (containerClassName) => {
+        if(isClickable) {
+            return (
+                <div className={containerClassName} onClick={handleImageClick}>
+                    <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
+                </div>
+            );
+        }
+        return (
+            <div className={containerClassName}>
+                <img src={linkedImage.url} alt={`Year ${year}`} />
+            </div>
+        );
+    }
 
     return (
         <div ref={ref} className={`timeline-item ${isLeftAligned ? 'left' : 'right'} ${inView ? 'on-screen' : ''}`}>
             {isLeftAligned && (
-                <div className="timeline-item.left" onClick={handleImageClick}>
-                    <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
-                </div>
+                generateImage("timeline-item.left")
             )}
             <div className="timeline-content">
                 <p>{description}</p>
                 <text>{text}</text>
             </div>
             {!isLeftAligned && (
-                <div className="timeline-item.right" onClick={handleImageClick}>
-                    <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
-                </div>
+                generateImage("timeline-item.right")
             )}
         </div>
     );
