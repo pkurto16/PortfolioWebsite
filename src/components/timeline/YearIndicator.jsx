@@ -1,7 +1,7 @@
 import React from "react";
 
 function YearIndicator({ activeYear, animationClass }) {
-    const years = ["Beginnings", "Summer at FirstBuild", "DSA at DA", "GEA Smarthome", "Purdue"];
+    const years = ["Beginnings", "FirstBuild", "DSA at DA", "GE Appliances", "Purdue"];
 
     return (
         <div className={`year-indicator ${animationClass}`}>

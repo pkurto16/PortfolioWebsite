@@ -22,13 +22,13 @@ function TimelineItem({ year, linkedImage, description, alignment, onVisibilityC
     return (
         <div ref={ref} className={`timeline-item ${isLeftAligned ? 'left' : 'right'} ${inView ? 'on-screen' : ''}`}>
             {isLeftAligned && (
-                <div className="timeline-image" onClick={handleImageClick}>
+                <div className="timeline-item.left" onClick={handleImageClick}>
                     <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
                 </div>
             )}
             <div className="timeline-content"><p>{description}</p></div>
             {!isLeftAligned && (
-                <div className="timeline-image" onClick={handleImageClick}>
+                <div className="timeline-item.right" onClick={handleImageClick}>
                     <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
                 </div>
             )}

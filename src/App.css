@@ -35,13 +35,13 @@ body {
 
 .timeline-item {
     display: flex;
-    align-items: center;
+    align-items: self-start;
     justify-content: space-between;
     min-height: 80vh; /* Increase the height of each item */
-    max-width: 70vw;
-    padding: 20vh 5%; /* Add vertical spacing */
+    max-width: 65vw;
+    padding: 20vh 2vw 20vh 5vw; /* Add vertical spacing */
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateX(100px);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     will-change: transform, opacity;
 }
@@ -62,16 +62,22 @@ body {
     text-align: left;
 }
 
-.timeline-item.left .timeline-image,
-.timeline-item.right .timeline-image {
+.timeline-item.left,
+.timeline-item.right {
     width: 100%;
     height: auto;
 }
-
-.timeline-content img {
-    max-width: 100%;
+.timeline-item.right img, .timeline-item.left img{
+    width: 35vw;
     height: auto;
 }
+.timeline-item.right img{
+    padding-left: 3vw;
+}
+.timeline-item.left img{
+    padding-right: 3vw;
+}
+
 
 /* Animation Trigger */
 .on-screen {
@@ -95,7 +101,7 @@ body {
     margin-right: 5vw;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 20vw;
+    max-width: 25vw;
     opacity: 0;
     z-index: 2;
 }
@@ -126,7 +132,7 @@ body {
     z-index: 2;
     right: 10px;
     margin-right: 5vw;
-    max-width: 20vw;
+    max-width: 15vw;
 }
 
 .year {
@@ -137,7 +143,7 @@ body {
 }
 
 .year.active {
-    font-size: 3vw; /* Larger size for the active year */
+    font-size: 2.5vw; /* Larger size for the active year */
     opacity: 1; /* Full opacity for the active year */
 }
 

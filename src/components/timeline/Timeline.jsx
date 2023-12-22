@@ -6,10 +6,10 @@ import StaticIndicator from "./StaticIndicator";
 
 function Timeline() {
     const events = [
-        { year: "Beginnings", linkedImage: { url: "/assets/apcs.png", link: "/" }, description: "Beginnings: " },
-        { year: "Summer at FirstBuild", linkedImage: { url: "/assets/apcs.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Description for 2021" },
+        { year: "Beginnings", linkedImage: { url: "/assets/apcs.png", link: "" }, description: "Beginnings: " },
+        { year: "FirstBuild", linkedImage: { url: "/assets/firstbuild.png", link: "https://www.youtube.com/watch?v=0-uuLpWo9jk" }, description: "Summer at FirstBuild:" },
         { year: "DSA at DA", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2022" },
-        { year: "GEA Smarthome", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023" },
+        { year: "GE Appliances", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023" },
         { year: "Purdue", linkedImage: { url: "/assets/apcs.png", link: "https://example.com" }, description: "Description for 2023" },
     ];
 
