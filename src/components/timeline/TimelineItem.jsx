@@ -1,7 +1,7 @@
 import React from "react";
 import { useInView } from 'react-intersection-observer';
 
-function TimelineItem({ year, linkedImage, description, alignment, onVisibilityChange }) {
+function TimelineItem({ year, linkedImage, description, text, alignment, onVisibilityChange }) {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.5,
@@ -26,7 +26,10 @@ function TimelineItem({ year, linkedImage, description, alignment, onVisibilityC
                     <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
                 </div>
             )}
-            <div className="timeline-content"><p>{description}</p></div>
+            <div className="timeline-content">
+                <p>{description}</p>
+                <text>{text}</text>
+            </div>
             {!isLeftAligned && (
                 <div className="timeline-item.right" onClick={handleImageClick}>
                     <img src={linkedImage.url} alt={`Year ${year}`} style={{cursor: 'pointer'}} />
