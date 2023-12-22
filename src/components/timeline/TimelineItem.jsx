@@ -13,10 +13,12 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
     }, [year, inView, onVisibilityChange]);
 
     const isLeftAligned = alignment === 'left';
-
+    const isClickable = !(linkedImage.link === '');
     const handleImageClick = () => {
         // Open the link in a new tab
-        window.open(linkedImage.link, '_blank', 'noopener,noreferrer');
+        if(isClickable){
+            window.open(linkedImage.link, '_blank', 'noopener,noreferrer');
+        }
     };
 
     return (
