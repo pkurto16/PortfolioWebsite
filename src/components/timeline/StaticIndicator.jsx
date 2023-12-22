@@ -1,7 +1,7 @@
 import React from "react";
 import YearIndicator from "./YearIndicator";
 
-function StaticIndicator({activeYear,yearIndicatorAnimation, autoScroll}) {
+function StaticIndicator({activeYear,yearIndicatorAnimation}) {
 
     return (
         <div className={"static-indicator"}>

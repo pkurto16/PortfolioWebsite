@@ -84,9 +84,6 @@ function Timeline() {
         });
     };
 
-    const autoScroll = (year) => {
-        //todo: implement an autoscroll to go to the "year" passed in
-    }
     // Determine the most relevant year to display
     const activeYear = Array.from(visibleYears).sort().reverse()[0];
 
@@ -108,7 +105,6 @@ function Timeline() {
             <StaticIndicator
                 activeYear={activeYear}
                 yearIndicatorAnimation={yearIndicatorAnimation}
-                autoScroll = {autoScroll}
             />
 
         </>
