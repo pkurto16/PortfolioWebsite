@@ -1,5 +1,6 @@
 import React from "react";
-import YearIndicator from "./YearIndicator";
+import YearIndicator from "./yearIndicator/YearIndicator";
+import "./StaticIndicator.css";
 
 function StaticIndicator({activeYear,yearIndicatorAnimation}) {
 

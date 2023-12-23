@@ -1,0 +1,9 @@
+.static-indicator{
+    background: #042e60;
+    opacity: 1;
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+    margin-right: 5vw;
+    max-width: 15vw;
+}

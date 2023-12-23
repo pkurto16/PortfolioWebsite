@@ -1,8 +1,8 @@
 import React, {useEffect, useRef, useState} from "react";
-import TimelineItem from "./TimelineItem";
-import YearIndicator from "./YearIndicator";
+import TimelineItem from "./timeLineItem/TimelineItem";
 import debounce from "lodash/debounce";
-import StaticIndicator from "./StaticIndicator";
+import StaticIndicator from "./staticIndicator/StaticIndicator";
+import "./Timeline.css";
 
 function Timeline() {
     const events = [

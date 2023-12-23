@@ -1,6 +1,6 @@
 import React from "react";
 import { useInView } from 'react-intersection-observer';
-
+import "./TimelineItem.css";
 function TimelineItem({ year, linkedImage, description, text, alignment, onVisibilityChange }) {
     const { ref, inView } = useInView({
         triggerOnce: false,
@@ -35,7 +35,7 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
     }
 
     return (
-        <subsection id = {year}>
+        <section id = {year}>
         <div ref={ref} className={`timeline-item ${isLeftAligned ? 'left' : 'right'} ${inView ? 'on-screen' : ''}`}>
             {isLeftAligned && (
                 generateImage("timeline-item.left")
@@ -48,7 +48,7 @@ function TimelineItem({ year, linkedImage, description, text, alignment, onVisib
                 generateImage("timeline-item.right")
             )}
         </div>
-        </subsection>
+        </section>
     );
 }
 

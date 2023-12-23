@@ -1,5 +1,5 @@
 import React from "react";
-import "./navbar.css"
+import "./Navbar.css"
 function Header() {
     return (
         <nav className="landing-nav">

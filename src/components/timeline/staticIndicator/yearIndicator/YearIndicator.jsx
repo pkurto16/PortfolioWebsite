@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./YearIndicator.css";
 function YearIndicator({ activeYear, animationClass }) {
 
     const timePeriods = ["Beginnings", "FirstBuild", "DSA at DA", "GE Appliances", "Purdue"];
