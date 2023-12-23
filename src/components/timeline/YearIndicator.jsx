@@ -2,11 +2,11 @@ import React from "react";
 
 function YearIndicator({ activeYear, animationClass }) {
 
-    const years = ["Beginnings", "FirstBuild", "DSA at DA", "GE Appliances", "Purdue"];
-
+    const timePeriods = ["Beginnings", "FirstBuild", "DSA at DA", "GE Appliances", "Purdue"];
+    const timePeriodUrls = ["beginnings", "firstbuild", "dsa-at-da", "gea", "purdue"]
     return (
         <div className={`year-indicator ${animationClass}`}>
-            {years.map((year) => (
+            {timePeriods.map((year) => (
                 <div key={year} className={`year ${year === activeYear ? 'active' : ''}`}>
                     <a href = {`#${year}`}>
                         {year}
