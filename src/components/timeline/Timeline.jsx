@@ -88,7 +88,7 @@ function Timeline() {
     const activeYear = Array.from(visibleYears).sort().reverse()[0];
 
     return (
-        <section id={"timeline"}>
+        <>
             <div className="timeline">
                 {events.map((event, index) => (
                     <TimelineItem
@@ -106,8 +106,7 @@ function Timeline() {
                 activeYear={activeYear}
                 yearIndicatorAnimation={yearIndicatorAnimation}
             />
-
-        </section>
+        </>
     );
 }
 

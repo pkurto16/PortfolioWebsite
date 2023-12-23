@@ -4,12 +4,14 @@ import "./header.css"
 
 function Header() {
     return (
+        <>
+        <Navbar></Navbar>
         <div className="header">
-            <Navbar></Navbar>
             <h1>Peter Kurto</h1>
             <p>Purdue University - Computer Science Student</p>
             <p>Short blurb about yourself...</p>
         </div>
+            </>
     );
 }
 

@@ -2,11 +2,15 @@
 .header-logo {
     /* Adjust the size of your logo as necessary */
     height: auto; /* Example height for your logo */
-    width: 10vw;
+    width: 5vw;
     align-self: center;
-    padding-right: 32vw;
+    padding-right: 55vw;
+    padding-left: 2vw;
 }
-
+.landing-nav{
+    background: black;
+    height: 15vh;
+}
 .landing-nav ul {
     list-style: none;
     padding: 0;

@@ -1,12 +1,12 @@
 .header {
-    min-height: 100vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: #041b3a;
-    background-image: radial-gradient(circle at 15% -20%, #042c54 20%, rgb(4, 27, 58) 60%);
+    background-image: radial-gradient(circle at 10% -30%, #042c54 20%, rgb(4, 27, 58) 50%);
     background-size: cover;
     font-size: 4vw; /* Even larger font size for greater impact */
     color: #fff; /* Bright text color for contrast */
