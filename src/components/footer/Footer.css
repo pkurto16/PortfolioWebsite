@@ -1,0 +1,29 @@
+.footer{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background: #000000;
+    background-size: cover;
+    font-size: 1vw; /* Even larger font size for greater impact */
+    color: #fff; /* Bright text color for contrast */
+    position: relative;
+    z-index: 4;
+}
+
+.links{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+}
+
+.relevant-link a{
+    font-size: 1vw;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 4vw;
+}

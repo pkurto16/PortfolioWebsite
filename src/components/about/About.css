@@ -1,0 +1,14 @@
+.about{
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    background: transparent;
+    font-size: 1vw; /* Even larger font size for greater impact */
+    color: #fff; /* Bright text color for contrast */
+    position: relative;
+    z-index: 4;
+}
+
+.about-title{
+    font-size: 4vw;
+}

@@ -1,0 +1,19 @@
+.projects{
+    height: 150vh;
+    background: transparent;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    align-items: self-start;
+    font-size: 4vw; /* Even larger font size for greater impact */
+    color: #fff; /* Bright text color for contrast */
+    position: relative;
+    z-index: 4;
+}
+
+.projects-title{
+    padding-top: 30vh;
+}
+.project{
+    font-size: 2vw;
+}

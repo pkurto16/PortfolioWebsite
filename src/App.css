@@ -11,3 +11,17 @@ body {
     background: #041b3a;
     overflow-x: hidden;
 }
+
+.timeline-cover{
+    height: 300vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #041b3a;
+    background-image: radial-gradient(circle at 90% 150%, #042c54 50%, rgb(4, 27, 58) 90%);
+    background-size: cover;
+    color: #fff; /* Bright text color for contrast */
+    position: relative;
+    z-index: 3;
+}
