@@ -13,7 +13,7 @@ function Footer() {
                     <a href= "https://twitter.com/" target="_blank">Twitter</a>
                 </div>
                 <div className="relevant-link">
-                    <a href= "https://github.com/" target="_blank">Github</a>
+                    <a href= "https://github.com/pkurto16" target="_blank">Github</a>
                 </div>
                 <div className="relevant-link">
                     <a href= "https://facebook.com/" target="_blank">Facebook</a>
