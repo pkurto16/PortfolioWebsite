@@ -17,3 +17,12 @@
 .project{
     font-size: 2vw;
 }
+.project a{
+    font-family: 'Sansation', sans-serif;
+    font-size: 1vw;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 4vw;
+}
