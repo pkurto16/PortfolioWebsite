@@ -16,8 +16,11 @@
 }
 .project{
     font-size: 2vw;
+    padding-bottom: 1vh;
 }
-.project a{
+.project-link{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
     font-family: 'Sansation', sans-serif;
     font-size: 1vw;
     color: #ffffff;
